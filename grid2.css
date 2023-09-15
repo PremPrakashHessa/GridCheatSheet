@@ -1,0 +1,52 @@
+/* this shows GRID TEMPLATE AREAS , ANOTHER WAY TO APPROACH GRID  */
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: sans-serif;
+    font-size: 16px;
+    height: 100vh;
+
+    display: grid;
+    grid-template-areas: 
+    'head  head     head'
+    'nav  content  sidebar'
+    'nav   foot     foot';
+
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 80px 1fr 70px;
+
+    
+}
+
+header,main,nav,aside,footer {
+    background-color: steelblue;
+    color: white;
+    border: skyblue 1px solid;
+    padding: 20px;
+
+}
+
+header{
+    grid-area: head;
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: content;
+}
+
+aside{
+    grid-area: sidebar;
+}
+
+footer{
+    grid-area: foot;
+}
